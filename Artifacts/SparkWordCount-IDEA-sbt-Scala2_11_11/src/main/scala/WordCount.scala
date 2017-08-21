@@ -13,6 +13,8 @@ object WordCount {
 //    val conf = new SparkConf().setMaster("local").setAppName("wordCount")
     val conf = new SparkConf().setAppName("KMSparkWordCount").setMaster("spark://192.168.10.18:7077")
       .setJars(List("/Users/zhouqihua/Desktop/SparkWordCount-IDEA-sbt-Scala2_11_11/out/artifacts/SparkWordCount_IDEA_sbt_Scala2_11_11_jar/SparkWordCount-IDEA-sbt-Scala2_11_11.jar"))
+        //.set("spark.executor.extraJavaOptions", "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005")
+
     // Create a Scala Spark Context.
     val sc = new SparkContext(conf)
     // Load our input data.
